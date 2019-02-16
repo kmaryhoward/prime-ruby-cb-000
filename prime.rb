@@ -1,3 +1,7 @@
 def prime?(num)
-  (2...num.abs).detect { |x| num % x == 0 }.nil?
+  unless num.abs == 1
+    (2...num.abs).detect { |x| num % x == 0 }.nil?
+  else
+    false
+  end
 end
